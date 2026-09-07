@@ -84,9 +84,21 @@ function executeCommand(cmd, body) {
         <div>  <span class="highlight">whoami</span>   - Ver perfil e información de Diego</div>
         <div>  <span class="highlight">skills</span>   - Listar lenguajes y tecnologías clave</div>
         <div>  <span class="highlight">crm</span>      - Información del Sistema CRM activo</div>
+        <div>  <span class="highlight">projects</span> - Ver lista de sitios web activos</div>
         <div>  <span class="highlight">contact</span>  - Datos de contacto directo</div>
         <div>  <span class="highlight">github</span>   - Ir al perfil de GitHub</div>
         <div>  <span class="highlight">clear</span>    - Limpiar consola</div>
+      `;
+      break;
+
+    case 'projects':
+      responseHTML = `
+        <div style="color: var(--accent-cyan); font-weight: bold;">Sitios Web Activos & Proyectos:</div>
+        <div>• Mariachi Angels de TX: <span class="highlight">mariachiangelsdetx.com</span></div>
+        <div>• Reinfallen: <span class="highlight">reinfallen.com</span></div>
+        <div>• Maggie's Cleaning Services VA: <span class="highlight">maggiescleaningservicesva.com</span></div>
+        <div>• JLM NC: <span class="highlight">jlmnc.com</span></div>
+        <div>• Domingo Locksmith: <span class="highlight">domingolocksmith.com</span></div>
       `;
       break;
 
