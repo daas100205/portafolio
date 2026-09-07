@@ -186,12 +186,24 @@ function initMobileMenu() {
 
   if (toggle && navLinks) {
     toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      const isActive = navLinks.classList.toggle('active');
+      const icon = toggle.querySelector('i');
+      if (icon) {
+        if (isActive) {
+          icon.className = 'fa-solid fa-xmark';
+        } else {
+          icon.className = 'fa-solid fa-bars';
+        }
+      }
     });
 
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
+        const icon = toggle.querySelector('i');
+        if (icon) {
+          icon.className = 'fa-solid fa-bars';
+        }
       });
     });
   }
